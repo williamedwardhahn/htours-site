@@ -7,39 +7,41 @@
 <title>Field Guide — Pepsi &amp; Palaces</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Courier+Prime:wght@400;700&display=swap">
 <link rel="stylesheet" href="../../assets/style.css">
 <style>
-  /* Field guide is operated one-handed, outdoors, mid-tour. Bigger type,
-     bigger targets, and the clock always readable at arm's length. */
-  body { font-size: 18px; }
+  /* The field guide is read one-handed, outdoors, in sunlight, mid-tour. It
+     borrows the brand's ink and rules but deliberately drops the display face
+     for body copy: Source Serif has the x-height and weight to survive glare
+     that a Garamond does not. Legibility beats consistency on this one page. */
+  body { --body: "Source Serif 4", Georgia, serif; font-size: 19px; }
   .guide { max-width: 640px; margin: 0 auto; padding: 0 20px 80px; }
-  .top { padding: 26px 0 18px; border-bottom: 2px solid var(--ink); }
-  .top h1 { font-size: 38px; }
-  .top .sub { font-family: var(--mono); font-size: 12px; letter-spacing: .08em;
-    text-transform: uppercase; color: var(--muted); margin-top: 10px;
-    display: flex; flex-wrap: wrap; gap: 4px 14px; }
-  .stop { padding: 26px 0; border-bottom: 1px solid var(--rule); }
+  .top { padding: 26px 0 18px; border-bottom: 3px solid var(--ink); }
+  .top h1 { font-family: var(--display); font-size: 44px; margin: 12px 0 0; }
+  .top .sub { font-family: var(--util); font-size: 11px; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--muted); margin-top: 12px;
+    display: flex; flex-wrap: wrap; gap: 4px 16px; }
+  .stop { padding: 28px 0; border-bottom: 1px dotted var(--rule); }
   .stop-head { display: flex; align-items: baseline; gap: 12px; }
-  .clock { font-family: var(--mono); font-size: 26px; font-weight: 600;
-    color: var(--river); font-variant-numeric: tabular-nums; }
-  .dur { font-family: var(--mono); font-size: 12px; letter-spacing: .1em;
+  .clock { font-family: var(--util); font-size: 27px; font-weight: 700;
+    color: var(--verdigris); }
+  .dur { font-family: var(--util); font-size: 11px; letter-spacing: .18em;
     text-transform: uppercase; color: var(--muted); }
-  .stop h2 { font-size: 30px; margin: 8px 0 2px; }
-  .where { font-family: var(--mono); font-size: 12.5px; letter-spacing: .05em;
-    text-transform: uppercase; color: var(--muted); margin: 0 0 14px; }
-  .beat { font-size: 18.5px; line-height: 1.6; margin: 0 0 14px; }
+  .stop h2 { font-family: var(--display); font-size: 33px; margin: 10px 0 3px; }
+  .where { font-family: var(--util); font-size: 11.5px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--muted); margin: 0 0 15px; }
+  .beat { font-size: 19px; line-height: 1.58; margin: 0 0 15px; max-width: none; }
   .hook { background: var(--brass-soft); border-left: 3px solid var(--brass);
-    padding: 12px 16px; font-size: 16.5px; margin: 0; }
-  .hook b { display: block; font-family: var(--mono); font-size: 10.5px;
-    font-weight: 600; letter-spacing: .13em; text-transform: uppercase;
-    color: var(--brass); margin-bottom: 4px; }
-  .closer { margin-top: 34px; background: var(--river-soft);
-    border-left: 3px solid var(--river); padding: 20px 22px; }
-  .closer h2 { font-size: 26px; margin-bottom: 10px; }
-  .closer .ask { font-size: 19px; font-style: italic; }
-  .closer ul { margin: 12px 0 0; padding-left: 20px; font-size: 16.5px; }
-  .closer li { margin-bottom: 5px; }
+    padding: 13px 17px; font-size: 17px; margin: 0; max-width: none; }
+  .hook b { display: block; font-family: var(--util); font-size: 10px;
+    font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--brass); margin-bottom: 5px; }
+  .closer { margin-top: 36px; background: var(--verdigris-soft);
+    border-left: 3px solid var(--verdigris); padding: 22px 24px; }
+  .closer h2 { font-family: var(--display); font-size: 29px; margin-bottom: 11px; }
+  .closer .ask { font-size: 20px; font-style: italic; max-width: none; }
+  .closer ul { margin: 14px 0 0; padding-left: 20px; font-size: 17px; }
+  .closer li { margin-bottom: 6px; }
 </style>
 </head>
 <body>

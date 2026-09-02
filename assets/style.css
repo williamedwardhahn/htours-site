@@ -1,44 +1,147 @@
-/* HTours — shared design tokens. One system across the public site and the team pages. */
+/* HTours — shared design tokens.
+   Direction: an 1898 apothecary broadside. Bradham mixed Brad's Drink behind a
+   pharmacy counter, so the site borrows that era's commercial printing —
+   letterpress rules, bottle-glass green, label stock, Didone display type. */
+
 :root {
-  --ink:#16232b; --paper:#f7f6f2; --surface:#fff; --surface-2:#eeeeea;
-  --rule:#d5d8d5; --muted:#5d6b6f;
-  --river:#1c5c68; --river-soft:#e2edee;
-  --brass:#966f2c; --brass-soft:#f0e7d5;
-  --clay:#8c4033; --clay-soft:#f4e3e0;
-  --shadow:0 1px 2px rgba(22,35,43,.06);
-  --display:"Instrument Serif",Georgia,"Times New Roman",serif;
-  --body:"Source Serif 4",Georgia,serif;
-  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  /* Ink & stock */
+  --ink:        #12261f;   /* apothecary bottle glass, near-black green */
+  --paper:      #e9e4d6;   /* pharmacy label stock */
+  --surface:    #f2eee3;
+  --surface-2:  #ded8c7;
+  --rule:       #bcb5a0;
+  --muted:      #5f6b5d;
+
+  /* Accents — verdigris carries the page, carmine is spent once */
+  --verdigris:      #2f7d6a;
+  --verdigris-soft: #d5e0d6;
+  --carmine:        #a3282a;
+  --carmine-soft:   #ecdcd3;
+  --brass:          #9a7526;
+  --brass-soft:     #e3dbc2;
+
+  --shadow: 0 1px 0 rgba(18,38,31,.10);
+
+  --display: "Bodoni Moda", "Didot", Georgia, serif;
+  --body:    "EB Garamond", Georgia, serif;
+  --util:    "Courier Prime", ui-monospace, Courier, monospace;
+
+  /* Printer's grain, applied over the whole page */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+  --grain-opacity: .16;
+  --grain-blend: multiply;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --ink:#eef2f1; --paper:#101a1f; --surface:#16232b; --surface-2:#1d2d35;
-  --rule:#2c3f48; --muted:#9aabb0;
-  --river:#6fc4d0; --river-soft:#17323a;
-  --brass:#d9ad63; --brass-soft:#2b2517;
-  --clay:#e08d7d; --clay-soft:#33201d;
-  --shadow:0 1px 2px rgba(0,0,0,.3);
-}}
-:root[data-theme="dark"]{
-  --ink:#eef2f1; --paper:#101a1f; --surface:#16232b; --surface-2:#1d2d35;
-  --rule:#2c3f48; --muted:#9aabb0;
-  --river:#6fc4d0; --river-soft:#17323a;
-  --brass:#d9ad63; --brass-soft:#2b2517;
-  --clay:#e08d7d; --clay-soft:#33201d;
-  --shadow:0 1px 2px rgba(0,0,0,.3);
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink:        #e7e2d2;
+    --paper:      #101d18;   /* the same bottle, held up to the light */
+    --surface:    #17271f;
+    --surface-2:  #1f3329;
+    --rule:       #33473a;
+    --muted:      #9aa89a;
+    --verdigris:      #6fbfa5;
+    --verdigris-soft: #16302a;
+    --carmine:        #e0776b;
+    --carmine-soft:   #2d1c1b;
+    --brass:          #cfa855;
+    --brass-soft:     #2a2417;
+    --shadow: 0 1px 0 rgba(0,0,0,.4);
+    --grain-opacity: .10;
+    --grain-blend: overlay;
+  }
 }
-*{box-sizing:border-box}
-html{color-scheme:light dark}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
-  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
-img{max-width:100%}
-a{color:var(--river);text-underline-offset:2px}
-a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:2px}
-.wrap{max-width:940px;margin:0 auto;padding:0 28px 96px}
-.eyebrow{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--muted)}
-h1{font-family:var(--display);font-weight:400;letter-spacing:-.015em;line-height:.98;
-  margin:14px 0 0;text-wrap:balance}
-h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;margin:0;letter-spacing:-.01em}
-p{margin:0 0 15px;max-width:68ch}
-p:last-child{margin-bottom:0}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+:root[data-theme="dark"] {
+  --ink:        #e7e2d2;
+  --paper:      #101d18;
+  --surface:    #17271f;
+  --surface-2:  #1f3329;
+  --rule:       #33473a;
+  --muted:      #9aa89a;
+  --verdigris:      #6fbfa5;
+  --verdigris-soft: #16302a;
+  --carmine:        #e0776b;
+  --carmine-soft:   #2d1c1b;
+  --brass:          #cfa855;
+  --brass-soft:     #2a2417;
+  --shadow: 0 1px 0 rgba(0,0,0,.4);
+  --grain-opacity: .10;
+  --grain-blend: overlay;
+}
+
+* { box-sizing: border-box; }
+html { color-scheme: light dark; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 19px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: var(--grain);
+  opacity: var(--grain-opacity);
+  mix-blend-mode: var(--grain-blend);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+img { max-width: 100%; }
+a { color: var(--verdigris); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--carmine);
+  outline-offset: 3px;
+}
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  line-height: 1.08;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p { margin: 0 0 16px; max-width: 66ch; }
+p:last-child { margin-bottom: 0; }
+
+.eyebrow {
+  font-family: var(--util);
+  font-size: 11.5px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Letterpress rules — the page's connective tissue */
+.rule-double {
+  border: 0;
+  border-top: 3px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  height: 4px;
+  margin: 0;
+}
+.fleuron {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--brass);
+  margin: 0;
+}
+.fleuron::before, .fleuron::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+.fleuron span { font-size: 13px; letter-spacing: .3em; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
