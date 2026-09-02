@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The New Bern Playbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --ink:        #16232b;
+    --paper:      #f7f6f2;
+    --surface:    #ffffff;
+    --surface-2:  #eeeeea;
+    --rule:       #d5d8d5;
+    --muted:      #5d6b6f;
+    --river:      #1c5c68;
+    --river-soft: #e2edee;
+    --brass:      #966f2c;
+    --brass-soft: #f0e7d5;
+    --clay:       #8c4033;
+    --clay-soft:  #f4e3e0;
+    --shadow:     0 1px 2px rgba(22,35,43,.06);
+
+    --display: "Instrument Serif", Georgia, "Times New Roman", serif;
+    --body:    "Source Serif 4", Georgia, serif;
+    --mono:    "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink:        #eef2f1;
+      --paper:      #101a1f;
+      --surface:    #16232b;
+      --surface-2:  #1d2d35;
+      --rule:       #2c3f48;
+      --muted:      #9aabb0;
+      --river:      #6fc4d0;
+      --river-soft: #17323a;
+      --brass:      #d9ad63;
+      --brass-soft: #2b2517;
+      --clay:       #e08d7d;
+      --clay-soft:  #33201d;
+      --shadow:     0 1px 2px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink:        #eef2f1;
+    --paper:      #101a1f;
+    --surface:    #16232b;
+    --surface-2:  #1d2d35;
+    --rule:       #2c3f48;
+    --muted:      #9aabb0;
+    --river:      #6fc4d0;
+    --river-soft: #17323a;
+    --brass:      #d9ad63;
+    --brass-soft: #2b2517;
+    --clay:       #e08d7d;
+    --clay-soft:  #33201d;
+    --shadow:     0 1px 2px rgba(0,0,0,.3);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 28px 96px;
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead {
+    padding: 64px 0 34px;
+    border-bottom: 2px solid var(--ink);
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(46px, 7.5vw, 78px);
+    line-height: .98;
+    letter-spacing: -.015em;
+    margin: 14px 0 0;
+    text-wrap: balance;
+  }
+  .standfirst {
+    margin: 18px 0 0;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--muted);
+    max-width: 60ch;
+  }
+  .standfirst em { color: var(--ink); font-style: italic; }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: 34px;
+    border-top: 1px solid var(--rule);
+  }
+  .fact {
+    flex: 1 1 150px;
+    padding: 14px 20px 14px 0;
+    border-right: 1px solid var(--rule);
+  }
+  .fact:last-child { border-right: 0; }
+  .fact dt {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .fact dd {
+    margin: 5px 0 0;
+    font-family: var(--display);
+    font-size: 25px;
+    line-height: 1.15;
+  }
+
+  /* ---------- sections ---------- */
+  section { margin-top: 72px; }
+
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+  .sec-head h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.1;
+    margin: 0;
+    letter-spacing: -.01em;
+  }
+  .sec-head .tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  h3 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 1.15;
+    margin: 0;
+  }
+  p { margin: 0 0 15px; max-width: 68ch; }
+  p:last-child { margin-bottom: 0; }
+  a { color: var(--river); text-underline-offset: 2px; }
+  a:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--brass);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* ---------- gate tiers ---------- */
+  .tier { margin-top: 40px; }
+  .tier-bar {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 9px 0 9px 14px;
+    border-left: 4px solid var(--gate, var(--river));
+    background: var(--gate-soft, var(--river-soft));
+  }
+  .tier-bar .gate {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gate, var(--river));
+  }
+  .tier-bar .gate-note {
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .tier.now       { --gate: var(--river); --gate-soft: var(--river-soft); }
+  .tier.partner   { --gate: var(--brass); --gate-soft: var(--brass-soft); }
+  .tier.licensed  { --gate: var(--clay);  --gate-soft: var(--clay-soft); }
+
+  .ideas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-top: 0;
+  }
+  .idea {
+    background: var(--surface);
+    padding: 22px 22px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .idea-top { display: flex; flex-direction: column; gap: 7px; }
+  .idea h3 { font-size: 24px; }
+  .spec {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    font-variant-numeric: tabular-nums;
+  }
+  .spec b { color: var(--gate, var(--river)); font-weight: 600; }
+  .idea p { font-size: 15.5px; line-height: 1.55; margin: 0; }
+  .idea .why {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px dotted var(--rule);
+    font-size: 14.5px;
+    color: var(--muted);
+  }
+  .idea .why b {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--gate, var(--river));
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 600;
+  }
+  .runs {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---------- callouts ---------- */
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--brass);
+    padding: 22px 24px;
+    margin: 32px 0;
+    box-shadow: var(--shadow);
+  }
+  .callout.warn { border-left-color: var(--clay); }
+  .callout .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--brass);
+    display: block;
+    margin-bottom: 9px;
+  }
+  .callout.warn .label { color: var(--clay); }
+  .callout h3 { font-size: 24px; margin-bottom: 10px; }
+
+  /* ---------- steps ---------- */
+  ol.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+  ol.steps > li {
+    counter-increment: s;
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  ol.steps > li:first-child { border-top: 1px solid var(--rule); }
+  ol.steps > li::before {
+    content: counter(s, decimal-leading-zero);
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--river);
+    padding-top: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+  ol.steps h3 { font-size: 23px; margin-bottom: 8px; }
+  ol.steps p { font-size: 16px; }
+  .meta {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+
+  /* ---------- table ---------- */
+  .table-scroll { overflow-x: auto; margin: 26px 0 10px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--mono);
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    min-width: 460px;
+  }
+  caption {
+    text-align: left;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-bottom: 10px;
+  }
+  th, td { padding: 11px 14px; text-align: right; border-bottom: 1px solid var(--rule); }
+  th:first-child, td:first-child { text-align: left; }
+  thead th {
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--ink);
+    font-weight: 500;
+  }
+  tbody tr:last-child td { border-bottom: 1px solid var(--ink); font-weight: 600; }
+  td.pos { color: var(--river); }
+
+  /* ---------- checklist ---------- */
+  .checks { list-style: none; margin: 20px 0 0; padding: 0; display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+  .checks li {
+    background: var(--surface);
+    padding: 13px 18px;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 14px;
+    align-items: start;
+    font-size: 15.5px;
+  }
+  .checks li::before {
+    content: "";
+    width: 15px; height: 15px;
+    margin-top: 6px;
+    border: 1.5px solid var(--muted);
+    border-radius: 3px;
+  }
+  .checks li b { font-weight: 600; }
+
+  footer {
+    margin-top: 76px;
+    padding-top: 20px;
+    border-top: 2px solid var(--ink);
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 620px) {
+    .wrap { padding: 0 18px 64px; }
+    .fact { border-right: 0; flex: 1 1 100%; border-bottom: 1px solid var(--rule); }
+    ol.steps > li { grid-template-columns: 32px 1fr; gap: 14px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">Launch Plan · New Bern, North Carolina · For David &amp; Sophia</div>
+    <h1>The New Bern Playbook</h1>
+    <p class="standfirst">Fourteen ways to sell a walk through a 300-year-old river town — sorted by <em>what stands between you and the first paying guest</em>, not by what sounds best.</p>
+
+    <dl class="facts">
+      <div class="fact"><dt>Anchor product</dt><dd>90 minutes</dd></div>
+      <div class="fact"><dt>Launch price</dt><dd>$39 / guest</dd></div>
+      <div class="fact"><dt>Startup cost</dt><dd>Near zero</dd></div>
+      <div class="fact"><dt>Airbnb takes</dt><dd>20%</dd></div>
+    </dl>
+  </header>
+
+  <section>
+    <div class="sec-head">
+      <h2>The strategy in one paragraph</h2>
+    </div>
+    <p>Two people who can both lead a group is the real asset here, and it points somewhere unglamorous: <strong>run one excellent 90-minute walk three times a day rather than one ambitious boat trip once.</strong> Three Saturday departures of eight guests at $39 is $936 gross from a product that needs no vessel, no captain's license, no insurance beyond general liability, and no inventory. The same Saturday spent on one charter needs a boat, a Coast Guard credential, a state for-hire license, and marine coverage — to earn less. Density before ambition. The water tours are a real business, but they're the <em>second</em> business, funded by the first.</p>
+    <p>The tiers below are organized around that idea. Everything in the first tier can be sold this month.</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>The idea portfolio</h2>
+      <span class="tag">14 concepts · 3 gates</span>
+    </div>
+
+    <!-- TIER 1 -->
+    <div class="tier now">
+      <div class="tier-bar">
+        <span class="gate">Gate 1 — Open now</span>
+        <span class="gate-note">Needs only two people, comfortable shoes, and a script.</span>
+      </div>
+      <div class="ideas">
+
+        <article class="idea">
+          <div class="idea-top">
+            <h3>Pepsi &amp; Palaces</h3>
+            <div class="spec"><b>90 min</b><span>·</span><span>1–8 guests</span><span>·</span><b>$39</b></div>
+          </div>
+          <p>The anchor. Open at 256 Middle Street where Caleb Bradham mixed "Brad's Drink" in the 1890s, then walk out through Christ Church, the Baxter Clock, and the Tryon Palace grounds to finish where the Trent meets the Neuse.</p>
+          <div class="why"><b>Why it works</b>Pepsi is a hook every visitor already recognizes. It buys you 90 minutes to teach them the town they actually walked into.</div>
+        </article>
+
+        <article class="idea">
+          <div class="idea-top">
+            <h3>The Bear Hunt</h3>
+            <div class="spec"><b>60 min</b><span>·</span><span>families</span><span>·</span><b>$25 / $15 kids</b></div>
+          </div>
+          <p>New Bern was founded by Swiss settlers who named it for Bern, whose coat of arms is a bear — which is why the town is full of them. Kids hunt and count painted bears on a worksheet; parents get the real history between stops.</p>
+          <div class="why"><b>Why it works</b>Families skip history tours because their kids will be miserable. Nobody in town is selling to them. Sophia can run this solo.</div>
+        </article>
+
+        <article class="idea">
+          <div class="idea-top">
+            <h3>Fire &amp; Ash</h3>
+            <div class="spec"><b>75 min</b><span>·</span><span>evening</span><span>·</span><b>$35</b></div>
+          </div>
+          <p>The Great Fire of 1922 took roughly a thousand buildings in a single day and fell hardest on New Bern's Black neighborhoods. Add Cedar Grove Cemetery and the weeping arch. Real history, told after dark.</p>
+          <div class="why"><b>Why it works</b>It fills an evening slot on a day you already worked. Ghost tours exist here — beat them with true stories rather than costumes.</div>
+        </article>
+
+        <article class="idea">
+          <div class="idea-top">
+            <h3>Freedom's Colony</h3>
+            <div class="spec"><b>90 min</b><span>·</span><span>1–10 guests</span><span>·</span><b>$45</b></div>
+          </div>
+          <p>Union forces took New Bern in 1862 and held it for the rest of the war, and thousands of formerly enslaved people came here for refuge — James City became one of the most significant freedmen's settlements in the country.</p>
+          <div class="why"><b>Why it works</b>The most important story in town and the least-told. It demands real homework and real care, and it is the tour that gets written about.</div>
+        </article>
+
+        <article class="idea">
+          <div class="idea-top">
+            <h3>Coffee &amp; Colonials</h3>
+            <div class="spec"><b>60 min</b><span>·</span><span>8am</span><span>·</span><b>$29</b></div>
+          </div>
+          <p>A short early walk with coffee included, aimed at guests staying in the downtown bed-and-breakfasts who are up and have nothing to do until ten.</p>
+          <div class="why"><b>Why it works</b>Cheapest possible product in a slot that is otherwise dead revenue. Also the easiest to trial-run.</div>
+        </article>
+
+        <article class="idea">
+          <div class="idea-top">
+            <h3>Private &amp; Wedding Party</h3>
+            <div class="spec"><b>2 hr</b><span>·</span><span>10–20 guests</span><span>·</span><b>$500 flat</b></div>
+          </div>
+          <p>Same route, booked whole. New Bern draws destination weddings, and the Friday afternoon before one is a group of twenty people with nothing scheduled.</p>
+          <div class="why"><b>Why it works</b>Books weeks ahead, doesn't price-shop, pays more per hour than anything else on this page.</div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- TIER 2 -->
+    <div class="tier partner">
+      <div class="tier-bar">
+        <span class="gate">Gate 2 — Needs a handshake</span>
+        <span class="gate-note">A restaurant, a dock, or a park has to say yes first. No licensing.</span>
+      </div>
+      <div class="ideas">
+
+        <article class="idea">
+          <div class="idea-top">
+            <h3>Historic Bites</h3>
+            <div class="spec"><b>2.5 hr</b><span>·</span><span>max 6</span><span>·</span><b>$89</b></div>
+          </div>
+          <p>Three prearranged tastings threaded through the history walk. Close at The Chelsea — the 1912 building Caleb Bradham himself put up — so the tour ends inside the story it started with.</p>
+          <div class="why"><b>Why it works</b>Highest revenue per guest of anything that doesn't need a boat. Negotiate a fixed per-head tasting price, never à la carte.</div>
+        </article>
+
+        <article class="idea">
+          <div class="idea-top">
+            <h3>Blue Crab 101</h3>
+            <div class="spec"><b>2 hr</b><span>·</span><span>families</span><span>·</span><b>$45</b></div>
+          </div>
+          <p>Dock-based, feet dry. Chicken necks and dip nets, how a blue crab lives, legal size and what you have to throw back, and how to pick one clean at the table afterward.</p>
+          <div class="why"><b>Why it works</b>Hands-on, photogenic, memorable, and needs permission from a dock owner rather than a credential from the Coast Guard.</div>
+        </article>
+
+        <article class="idea">
+          <div class="idea-top">
+            <h3>Waterfront Fishing Basics</h3>
+            <div class="spec"><b>2 hr</b><span>·</span><span>1–6 guests</span><span>·</span><b>$55</b></div>
+          </div>
+          <p>Shore and pier fishing at Lawson Creek or Union Point with tackle provided — knots, rigs, reading the water, and what actually bites in the Neuse.</p>
+          <div class="why"><b>Why it works</b>Teaches a skill people keep. Check first whether your guests need their own NC coastal recreational license or a blanket option covers them.</div>
+        </article>
+
+        <article class="idea">
+          <div class="idea-top">
+            <h3>Concierge Partnerships</h3>
+            <div class="spec"><b>B2B</b><span>·</span><span>ongoing</span><span>·</span><b>15% commission</b></div>
+          </div>
+          <p>Standing referral arrangements with the downtown inns and bed-and-breakfasts. Leave cards at the desk, pay a cut on anything booked, check in monthly.</p>
+          <div class="why"><b>Why it works</b>Their guests are already downtown, already interested in history, and already asking the front desk what to do today.</div>
+        </article>
+
+        <article class="idea">
+          <div class="idea-top">
+            <h3>River Cruise Shore Calls</h3>
+            <div class="spec"><b>B2B</b><span>·</span><span>100+ pax</span><span>·</span><b>contract</b></div>
+          </div>
+          <p>Small-ship lines running Intracoastal itineraries call at New Bern. A docked ship is a hundred people who need three hours ashore, booked in advance and paid for by the cruise line rather than the passenger.</p>
+          <div class="why"><b>Why it works</b>The highest-leverage channel on this page and the one nobody local thinks to chase. One contract can outweigh a season of walk-ups.</div>
+        </article>
+
+        <article class="idea">
+          <div class="idea-top">
+            <h3>Conference Evenings</h3>
+            <div class="spec"><b>2 hr</b><span>·</span><span>groups of 20+</span><span>·</span><b>$25 / head</b></div>
+          </div>
+          <p>Groups meeting downtown have a free evening and an organizer who has to fill it. Offer a fixed-price walk plus a drink stop, invoiced to the organization rather than collected per person.</p>
+          <div class="why"><b>Why it works</b>Midweek revenue in the slot tourism never fills, and one organizer books the same thing again next year.</div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- TIER 3 -->
+    <div class="tier licensed">
+      <div class="tier-bar">
+        <span class="gate">Gate 3 — Licensed</span>
+        <span class="gate-note">USCG OUPV "six-pack" + NC for-hire license + marine liability. Months, not weeks.</span>
+      </div>
+      <div class="ideas">
+
+        <article class="idea">
+          <div class="idea-top">
+            <h3>Rivers That Built New Bern</h3>
+            <div class="spec"><b>90 min</b><span>·</span><span>max 6</span><span>·</span><b>$75</b></div>
+          </div>
+          <p>The history cruise. Why the town sits exactly here, what moved on these rivers, how the waterfront changed, and what lives on it now.</p>
+          <div class="why"><b>Why it works</b>The natural upgrade for guests who just took the walking tour and want more.</div>
+        </article>
+
+        <article class="idea">
+          <div class="idea-top">
+            <h3>Sunset on the Neuse</h3>
+            <div class="spec"><b>90 min</b><span>·</span><span>couples</span><span>·</span><b>$85</b></div>
+          </div>
+          <p>Scenery and quiet rather than narration. Anniversaries, proposals, and the last night of a vacation.</p>
+          <div class="why"><b>Why it works</b>Sells on feeling, not information, so it prices above the history cruise for less preparation.</div>
+        </article>
+
+        <article class="idea">
+          <div class="idea-top">
+            <h3>Catch &amp; Learn</h3>
+            <div class="spec"><b>4 hr</b><span>·</span><span>private, ≤4</span><span>·</span><b>$450</b></div>
+          </div>
+          <p>A teaching charter rather than a fishing charter — the ecosystem, the tackle, the technique, and why the fish are where they are.</p>
+          <div class="why"><b>Why it works</b>Charters compete on fish caught. Teaching competes on the guide, which is the thing you actually have.</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Where to start</h2>
+      <span class="tag">First 90 days</span>
+    </div>
+    <p>Launch <strong>Pepsi &amp; Palaces</strong> alone. One product, run until it's genuinely good and has fifteen reviews. Adding a second tour before the first is sharp just splits attention across two mediocre ones.</p>
+    <p>Then add <strong>The Bear Hunt</strong>, because Sophia can run it at the same hour David runs the history walk and you double capacity without doubling work. Then <strong>Historic Bites</strong> for margin. Boats last, once something is paying for the license.</p>
+
+    <div class="table-scroll">
+      <table>
+        <caption>One Saturday, three departures, eight guests each</caption>
+        <thead>
+          <tr><th>Line</th><th>Per tour</th><th>× 3 tours</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Gross (8 × $39)</td><td>$312</td><td>$936</td></tr>
+          <tr><td>Airbnb service fee (20%)</td><td>−$62</td><td>−$187</td></tr>
+          <tr><td>Costs (handouts, water)</td><td>−$16</td><td>−$48</td></tr>
+          <tr><td>Take-home before tax</td><td class="pos">$234</td><td class="pos">$701</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="meta">Booked direct instead of through Airbnb, the same Saturday clears roughly $888.</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Setting up on Airbnb</h2>
+      <span class="tag">airbnb.com/host/experiences</span>
+    </div>
+
+    <div class="callout warn">
+      <span class="label">Check this before doing anything else</span>
+      <h3>New Bern may not be an available market</h3>
+      <p>Airbnb relaunched Experiences in 2025 across roughly 650 cities, and that list skews heavily toward major metros. New Bern has about thirty thousand people. It is genuinely possible the platform will not let you list here yet, and every hour spent writing listing copy before you know is an hour at risk.</p>
+      <p>Have David open the host flow and try to create an experience at a New Bern address. Twenty minutes, no commitment, and the answer determines whether Airbnb is the launch channel or just one channel later.</p>
+    </div>
+
+    <div class="callout">
+      <span class="label">The requirement people fail</span>
+      <h3>Two years of demonstrable expertise</h3>
+      <p>Airbnb asks Experience hosts for relevant background — training, career history, credentials, heritage, or documented local knowledge — and a person reviews it rather than an algorithm. "I live here and I like history" is not, on its own, a passing answer.</p>
+      <p>David's case should be concrete and true: years living in New Bern, an existing business in the community, specific knowledge of the waterfront and downtown. Write it as evidence, not as enthusiasm. Do not invent credentials — they verify.</p>
+    </div>
+
+    <ol class="steps">
+      <li>
+        <div>
+          <h3>Confirm the market is open</h3>
+          <p>Start the host flow at airbnb.com/host/experiences with a New Bern address before writing a word of copy. If it's closed or waitlisted, pivot to Viator and GetYourGuide as the launch channels and keep Airbnb as a later add.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Build the host profile and verify identity</h3>
+          <p>Real photo, real biography, the expertise case above. Identity verification and, where applicable, a background check have to clear before anything can publish.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Write the listing</h3>
+          <p>Title must lead with an action verb — Airbnb explicitly wants "discover," "explore," "taste." <em>Discover New Bern Through the Birthplace of Pepsi</em> beats <em>New Bern Walking Tour</em>. Then a description written about what the guest does, not about how much you know.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Build the itinerary in their format</h3>
+          <p>Airbnb requires a stop-by-stop itinerary from start to finish containing at least one real activity — something guests <em>do</em>, not just hear. The Pepsi tasting counts. Standing and listening does not.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Shoot five photographs minimum</h3>
+          <p>They must show the experience happening — you talking to a group, guests on the waterfront, the tasting, faces. Five scenic shots of Tryon Palace with nobody in them is the most common rejection. Run a free practice tour with friends and photograph it.</p>
+          <p class="meta">This is why photos come last — everything above has to exist first.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Set price and availability</h3>
+          <p>$39 to open. Airbnb deducts 20% from every payout, so a $39 seat pays about $31. Publish a narrow schedule at first — Friday afternoon, Saturday morning and afternoon, Sunday morning — and widen it once you know when New Bern visitors actually book.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Submit and wait</h3>
+          <p>Submitting is free and a human reviews it. Expect several days to several weeks; high-demand markets can waitlist. They may come back asking for changes, licenses, or proof of insurance — answer fast, since the clock restarts each round.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Run practice tours while you wait</h3>
+          <p>At least three, with different friends, timed, treated exactly like paid tours. Afterward ask where they got bored, which story they remember, and what they'd have paid. The first version is always too long; cutting makes it better.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="callout">
+      <span class="label">Channel strategy</span>
+      <h3>Airbnb is where you get reviews, not where you stay</h3>
+      <p>Twenty percent is a fair price for an audience you don't have yet and social proof you can't manufacture. It is a bad price forever. Get the first twenty-five reviews on Airbnb, then put a booking page of your own on the flyer and on every card you leave at a hotel desk, so repeat and referral traffic arrives direct at full margin.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Before the first paying guest</h2>
+      <span class="tag">Non-negotiable</span>
+    </div>
+    <ul class="checks">
+      <li><span><b>Insurance that names this activity.</b> David's existing policy almost certainly doesn't cover leading paying strangers through downtown traffic. Call the agent and say the words "guided walking tours for paying customers." Usually an endorsement, not a new policy.</span></li>
+      <li><span><b>Whatever New Bern requires of commercial tours.</b> One phone call to the city. Ask specifically about guiding groups for pay in the historic district.</span></li>
+      <li><span><b>Permission from every business in the route.</b> Talk to owners before you arrive with paying guests, not after.</span></li>
+      <li><span><b>A rain plan.</b> Covered route, or a clear reschedule-and-refund rule written into the listing before someone tests it.</span></li>
+      <li><span><b>Restrooms and water.</b> Know where every public restroom on the route is. Carry water. Ninety minutes is longer than people expect.</span></li>
+      <li><span><b>The route walked three times, out loud, on a timer.</b> A five-minute story in your head is a fifteen-minute story in the street.</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>The New Bern Playbook</span>
+    <span>Draft one · Ideas &amp; Airbnb setup</span>
+  </footer>
+
+</div>
+</body>
+</html>

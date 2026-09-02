@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pepsi &amp; Palaces — Historic New Bern Walking Tour</title>
+<meta name="description" content="A 90-minute guided walk through historic New Bern, North Carolina — from the pharmacy where Pepsi was invented to the point where the Trent meets the Neuse.">
+<meta property="og:title" content="Pepsi &amp; Palaces — Historic New Bern Walking Tour">
+<meta property="og:description" content="Ninety minutes on foot through North Carolina's first capital, led by people who live here.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  /* ---- hero ---- */
+  .hero { padding: 70px 0 36px; border-bottom: 2px solid var(--ink); }
+  .hero h1 { font-size: clamp(48px, 8vw, 86px); }
+  .hero .lede { font-size: 21px; line-height: 1.48; color: var(--muted);
+    max-width: 56ch; margin: 20px 0 0; }
+  .hero .lede em { color: var(--ink); font-style: italic; }
+
+  .vitals { display: flex; flex-wrap: wrap; margin-top: 34px;
+    border-top: 1px solid var(--rule); }
+  .vitals div { flex: 1 1 130px; padding: 14px 20px 14px 0;
+    border-right: 1px solid var(--rule); }
+  .vitals div:last-child { border-right: 0; }
+  .vitals dt { font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--muted); }
+  .vitals dd { margin: 5px 0 0; font-family: var(--display); font-size: 26px; line-height: 1.1; }
+
+  .cta-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 32px; }
+  .btn { display: inline-block; background: var(--river); color: var(--paper);
+    font-family: var(--mono); font-size: 13px; font-weight: 600; letter-spacing: .09em;
+    text-transform: uppercase; padding: 15px 30px; text-decoration: none;
+    border: 1px solid var(--river); }
+  .btn:hover { background: var(--ink); border-color: var(--ink); }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--rule); }
+  .btn.ghost:hover { border-color: var(--ink); background: transparent; }
+
+  section { margin-top: 68px; }
+  .sec-head { display: flex; align-items: baseline; gap: 16px;
+    border-bottom: 1px solid var(--ink); padding-bottom: 10px; margin-bottom: 28px; }
+  .sec-head h2 { font-size: 34px; }
+  .sec-head .tag { font-family: var(--mono); font-size: 11px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--muted); margin-left: auto; white-space: nowrap; }
+
+  /* ---- itinerary ---- */
+  ol.itin { list-style: none; margin: 0; padding: 0; }
+  ol.itin li { display: grid; grid-template-columns: 68px 1fr; gap: 6px 20px;
+    padding: 15px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+  ol.itin li:first-child { border-top: 1px solid var(--rule); }
+  ol.itin .t { font-family: var(--mono); font-size: 14px; font-weight: 600;
+    color: var(--river); font-variant-numeric: tabular-nums; }
+  ol.itin .n { font-family: var(--display); font-size: 25px; line-height: 1.15; }
+  ol.itin .w { grid-column: 2; font-family: var(--mono); font-size: 11.5px;
+    letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+
+  /* ---- included ---- */
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+  .cols > div { background: var(--surface); padding: 22px; }
+  .cols h3 { font-size: 23px; margin-bottom: 10px; }
+  .cols ul { margin: 0; padding-left: 18px; font-size: 16px; }
+  .cols li { margin-bottom: 7px; }
+
+  .note { background: var(--surface); border: 1px solid var(--rule);
+    border-left: 4px solid var(--brass); padding: 22px 24px; margin-top: 30px;
+    box-shadow: var(--shadow); }
+  .note .label { font-family: var(--mono); font-size: 11px; font-weight: 600;
+    letter-spacing: .13em; text-transform: uppercase; color: var(--brass);
+    display: block; margin-bottom: 8px; }
+
+  footer { margin-top: 74px; padding-top: 20px; border-top: 2px solid var(--ink);
+    font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--muted);
+    display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  @media (max-width: 620px) {
+    .wrap { padding: 0 18px 64px; }
+    .vitals div { border-right: 0; flex: 1 1 100%; border-bottom: 1px solid var(--rule); }
+    ol.itin li { grid-template-columns: 56px 1fr; }
+    ol.itin .n { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">New Bern, North Carolina · Est. 1710</p>
+    <h1>Pepsi &amp; Palaces</h1>
+    <p class="lede">Ninety minutes on foot through North Carolina's first capital — beginning at the pharmacy counter where Pepsi-Cola was invented and ending where the Trent runs into the Neuse. <em>Led by people who actually live here.</em></p>
+
+    <dl class="vitals">
+      <div><dt>Duration</dt><dd>90 minutes</dd></div>
+      <div><dt>Price</dt><dd>$39</dd></div>
+      <div><dt>Group size</dt><dd>1–8 guests</dd></div>
+      <div><dt>Walking</dt><dd>1.3 miles</dd></div>
+    </dl>
+
+    <div class="cta-row">
+      <!-- BOOKING: replace href with the live Airbnb Experience URL once approved. -->
+      <a class="btn" href="#book">Book a walk</a>
+      <a class="btn ghost" href="#itinerary">See the route</a>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head"><h2>What you'll actually do</h2></div>
+    <p>Most of what visitors know about New Bern fits on a plaque. This walk is the version you'd get from a neighbor — the pharmacist who accidentally built a global brand and then went broke, the royal governor's palace that burned and came back, the fire in 1922 that redrew the town in a single day, and the rivers that explain why any of it is here.</p>
+    <p>You'll walk about a mile and a quarter on flat sidewalks, stop nine times, and finish at the water with somewhere good to eat and a reason to go there.</p>
+  </section>
+
+  <section id="itinerary">
+    <div class="sec-head">
+      <h2>The route</h2>
+      <span class="tag">9 stops · 90 minutes</span>
+    </div>
+    <ol class="itin">
+    <!-- ITINERARY:start -->
+      <li><span class="t">0:00</span><span class="n">The Pharmacy Counter</span><span class="w">Birthplace of Pepsi, 256 Middle St</span></li>
+      <li><span class="t">0:12</span><span class="n">The Bradham Marker</span><span class="w">Middle &amp; Pollock</span></li>
+      <li><span class="t">0:18</span><span class="n">Middle Street</span><span class="w">The 200 block</span></li>
+      <li><span class="t">0:26</span><span class="n">Christ Church</span><span class="w">Pollock Street, churchyard</span></li>
+      <li><span class="t">0:38</span><span class="n">The Baxter Clock</span><span class="w">Pollock &amp; Middle</span></li>
+      <li><span class="t">0:43</span><span class="n">Tryon Palace Grounds</span><span class="w">Exterior only — no admission included</span></li>
+      <li><span class="t">0:57</span><span class="n">Pollock Street Homes</span><span class="w">Walking east</span></li>
+      <li><span class="t">1:05</span><span class="n">The Fire Line</span><span class="w">Approaching the water</span></li>
+      <li><span class="t">1:15</span><span class="n">Where the Rivers Meet</span><span class="w">Union Point Park</span></li>
+    <!-- ITINERARY:end -->
+    </ol>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Details</h2></div>
+    <div class="cols">
+      <div>
+        <h3>Included</h3>
+        <ul>
+          <li>A guide who lives in New Bern</li>
+          <li>Ninety minutes, nine stops</li>
+          <li>Where to eat afterward, and why</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Not included</h3>
+        <ul>
+          <li>Tryon Palace admission — we see the grounds, not the interior</li>
+          <li>Food and drink</li>
+          <li>Transport; everything is on foot</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Bring</h3>
+        <ul>
+          <li>Shoes you can walk a mile in</li>
+          <li>Water in summer — it gets hot</li>
+          <li>A camera; there is a good group photo halfway</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note" id="book">
+      <span class="label">Booking</span>
+      <p>Booking opens once our listing is live. Until then, get in touch and we'll hold you a spot on one of the first walks.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span>Pepsi &amp; Palaces · New Bern, NC</span>
+    <span>An independent walking tour</span>
+  </footer>
+
+</div>
+</body>
+</html>
